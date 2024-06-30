@@ -1,0 +1,132 @@
+body{
+    perspective: 1800px;
+}
+
+#cards{
+    display: inline-block;
+    min-width: 1124px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px 20px var(--color-shadow);
+    padding: 40px 50px;
+    perspective: 1800px;
+    text-align: left;
+    transform-origin: 50% 50%;
+    font-family: "Open Sans", sans;
+    transform-style: preserve-3d;
+    transform: rotateX(11deg) rotateY(16.5deg);
+    margin: calc(50vh - 250px) calc(50vw - 562px - var(--body-padding-side));
+}
+#cards #subText{
+    color: var(--color-sub);
+    font-size: 16px;
+    margin-bottom: 6px;
+    transform: translateZ(25px);
+}
+#cards #mainText{
+    color: #3e3e42;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    transform: translateZ(35px);
+}
+#cards .card{
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px -5px  var(--color-shadow);
+    display: inline-block;
+    height: 250px;
+    overflow: hidden;
+    perspective: 1200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(35px);
+    transition: transform 200ms ease-out;
+    width: 175px;
+    text-align: center;
+    cursor: pointer;
+}
+#cards .card:hover{
+    transform: scale(125%);
+}
+#cards .card:not(:last-child){
+    margin-right: 30px;
+}
+#cards .card .img{
+    position: relative;
+    height: 100%;
+    z-index: 2;
+}
+#cards .card .bg{
+    position: absolute;
+    inset: -50px;
+    transform-origin: 50% 50%;
+    transform: translateZ(-50px);
+    z-index: 0;
+}
+#cards .card .bgFilter {
+    position: absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background: #000000a8;
+    transition: transform 200ms ease-out;
+    z-index: 1;
+}
+#cards .card:nth-child(3) .img{
+    top: -10px;
+    left: -10px;
+}
+#cards .card:nth-child(3) .bg{
+    background: url(https://wallpapercave.com/wp/wp10487933.jpg) center/cover no-repeat;
+}
+#cards .card:nth-child(4) .img{
+    left: -28px;
+}
+#cards .card:nth-child(4) .bg{
+    background: url(https://i1.sndcdn.com/artworks-000212037884-oysu0t-t500x500.jpg) center/cover no-repeat;
+}
+#cards .card:nth-child(5) .img{
+    top: 0px;
+    left: -14px;
+    height: 90%;
+}
+#cards .card:nth-child(5) .bg{
+    background: url(https://i.pinimg.com/736x/7e/c0/78/7ec0781ebd24a8b741a9babcfe120012.jpg) center/cover no-repeat;
+}
+#cards .card:nth-child(6) .img{
+    top: 20px;
+    left: -130px;
+    height: 80%;
+}
+#cards .card:nth-child(6) .bg{
+    background: url(https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/166450909_803231010399618_5255669171835569694_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=KGWS3VzWnYcQ7kNvgFUqjSc&_nc_ht=scontent-ssn1-1.xx&oh=00_AYCPiMF0WuIuWERR_mOOLp4Url4W8zT5SdHMpEdrcGrxRg&oe=66A5D374) center/cover no-repeat;
+}
+#cards .card:nth-child(7) .img{
+    top: 0px;
+    left: -100px;
+}
+#cards .card:nth-child(7) .bg{
+    background: url(https://theriftcrown.com/wp-content/uploads/2022/06/zaun_1200x630.jpg) center/cover no-repeat;
+}
+#cards .card .text{
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    background: linear-gradient(to bottom, #00000000 0%, #000000c0 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#cards .card .text .title{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 10px;
+    margin-bottom: 3px;
+}
