@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,500');
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Josefin Sans", sans-serif;
+}
+#list{
+    position: relative;
+    width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#list .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #98989b;
+    margin: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#list .card .imgBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    z-index: 100000;
+    border-radius: 20px;
+    overflow: hidden;
+    transform-origin: top;
+}
+#list .card:hover .imgBox{
+    transform: translateY(30px) scale(.55);
+}
+#list .card .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+}
+#list .card .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    transform: translateY(100%);
+    transition: .5s;
+}
+#list .card:hover .content{
+    transform: translateY(0%);
+}
+#list .card .content .details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+#list .card .content .details h2{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+#list .card .content .details h2 span{
+    font-size: .6em;
+    font-weight: 400;
+    color: #242327;
+}
+#list .card .content .details .social_icons{
+    position: relative;
+    display: flex;
+    margin-top: 5px;
+}
+#list .card .content .details .social_icons li{
+    list-style: none;
+    margin: 4px;
+}
+#list .card .content .details .social_icons li a{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2d2d31;
+    border-radius: 50%;
+    font-style: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    transition: .5s;
+}
+
+#list .card .content .details .social_icons li a:hover{
+    transform: rotate(360deg);
+}
+
+#list .card .content .details .social_icons li a .ion-icon{
+    width: 40px;
+
+}
