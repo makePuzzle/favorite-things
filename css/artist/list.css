@@ -4,23 +4,41 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: "Josefin Sans", sans-serif;
 }
 #list{
     position: relative;
     width: 1280px;
+    height: 620px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Josefin Sans", sans-serif;
+    overflow: hidden;
+}
+#list .card:nth-child(1){
+    left: 170px;
+}
+#list .card:nth-child(2){
+    left: 490px;
+}
+#list .card:nth-child(3){
+    left: 810px;
 }
 #list .card{
-    position: relative;
+    position: absolute;
     width: 300px;
     height: 400px;
     background-color: #98989b;
-    margin: 10px;
     border-radius: 20px;
     overflow: hidden;
+    transition: .5s;
+    top: 110px;
+}
+#list .card.none{
+    top: 620px;
+}
+#list .card.fix{
+    left: 170px;
 }
 #list .card .imgBox{
     position: absolute;
@@ -34,7 +52,8 @@ body{
     overflow: hidden;
     transform-origin: top;
 }
-#list .card:hover .imgBox{
+#list .card.fix .imgBox,
+#list .card.active .imgBox{
     transform: translateY(30px) scale(.55);
 }
 #list .card .imgBox img{
@@ -59,7 +78,8 @@ body{
     transform: translateY(100%);
     transition: .5s;
 }
-#list .card:hover .content{
+#list .card.fix .content,
+#list .card.active .content{
     transform: translateY(0%);
 }
 #list .card .content .details{
@@ -88,7 +108,7 @@ body{
     list-style: none;
     margin: 4px;
 }
-#list .card .content .details .social_icons li a{
+#list .card .content .details .social_icons li .detailBtn{
     width: 45px;
     height: 45px;
     display: flex;
@@ -100,13 +120,14 @@ body{
     color: #fff;
     text-decoration: none;
     transition: .5s;
+    cursor: pointer;
 }
 
-#list .card .content .details .social_icons li a:hover{
+#list .card .content .details .social_icons li .detailBtn:hover{
     transform: rotate(360deg);
 }
 
-#list .card .content .details .social_icons li a .ion-icon{
+#list .card .content .details .social_icons li .detailBtn .ion-icon{
     width: 40px;
 
 }
