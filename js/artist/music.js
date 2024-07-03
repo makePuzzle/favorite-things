@@ -1,37 +1,33 @@
-const cards = document.querySelectorAll('.card');
-const music = document.getElementById('music');
-const off = document.getElementById('off');
-const musicBtns = document.querySelectorAll('.musicBtn');
-const musicBtn_1 = document.getElementById('musicBtn_1');
+import {
+    fetchJSONData
+} from "../../js/util.js";
+const musicBox = document.getElementById("music");
 
-cards.forEach(card => {
-    card.addEventListener("mouseover",()=>{
-        card.classList.add("active")
+export async function innerMusicList(id) {
+    const musicList = new Object();
+    await fetchJSONData(`../../json/artist/${id}/musicList.json`,data => {
+        musicList[id] = data;
     });
-    card.addEventListener("mouseleave",()=>{
-        card.classList.remove("active")
+    const albumList = new Object();
+    await fetchJSONData(`../../json/artist/${id}/albumList.json`,data => {
+        albumList[id] = data;
     });
-});
 
-musicBtns.forEach(musicBtn => {
-    musicBtn.addEventListener("click",()=>{
-        console.log(musicBtn)
-        const thisCard = musicBtn.parentElement.parentElement.parentElement.parentElement.parentElement;
-        cards.forEach(card => {
-            card.classList.add("none")
-        });
-        thisCard.classList.remove("none");
-        thisCard.classList.add("fix");
-        music.classList.add("fix");
-        off.classList.add("fix");
-    });
-})
-
-off.addEventListener("click",()=>{
-    cards.forEach(card => {
-        card.classList.remove("none");
-        card.classList.remove("fix");
-        music.classList.remove("fix");
-        off.classList.remove("fix");
-    });
-});
+    console.log(albumList[id]);
+    let musicListHTML = ``;
+    for(let i = 0; i < musicList[id].length; i++){
+        musicListHTML += `
+            <li>
+                <div class="play">
+                    <img src="../../img/artist/${id}/album/${musicList[id][i].albumNum}.png" />
+                </div>
+                <div class="id">
+                    <div class="title">${musicList[id][i].title}</div>
+                    <div class="album">${albumList[id][musicList[id][i].albumNum - 1]}</div>
+                </div>
+            </li>
+        `;
+    };
+    musicListHTML = `<ul>${musicListHTML}</ul>`;
+    musicBox.innerHTML = musicListHTML;
+};

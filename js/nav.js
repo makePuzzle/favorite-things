@@ -21,7 +21,7 @@ const navHTML = `
         </a>
     </li>
     <li class="menu">
-        <a href="/html/artist/list.html">
+        <a href="/html/artist/card.html">
             <span class="icon">
                 <ion-icon name="musical-notes-outline"></ion-icon>
             </span>

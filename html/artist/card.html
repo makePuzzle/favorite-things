@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>Artist | list</title>
+    <title>Artist | card</title>
     <link rel="stylesheet" href="../../css/home.css">
     <link rel="stylesheet" href="../../css/nav.css">
-    <link rel="stylesheet" href="../../css/artist/list.css">
+    <link rel="stylesheet" href="../../css/artist/card.css">
     <link rel="stylesheet" href="../../css/artist/music.css">
 </head>
 <body>
     <div id="nav"></div>
     <div id="list">
-        <div class="card">
+        <div class="card" id="LeeSSang">
             <div class="imgBox">
-                <img src="../../img/artist/LeeSSang.png">
+                <img src="../../img/artist/LeeSSang/profile.png">
             </div>
             <div class="content">
                 <div class="details">
@@ -21,14 +21,14 @@
                         <li><a href="" class="detailBtn"><ion-icon class="ion-icon" name="logo-facebook"></ion-icon></a></li>
                         <li><a href="" class="detailBtn"><ion-icon class="ion-icon" name="logo-instagram"></ion-icon></a></li>
                         <li><a href="" class="detailBtn"><ion-icon class="ion-icon" name="logo-youtube"></ion-icon></a></li>
-                        <li><div class="detailBtn musicBtn" id="musicBtn_1"><ion-icon class="ion-icon" name="musical-notes-outline"></ion-icon></div></li>
+                        <li><div class="detailBtn musicBtn"><ion-icon class="ion-icon" name="musical-notes-outline"></ion-icon></div></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" id="HuckleberryP">
             <div class="imgBox">
-                <img src="../../img/artist/HuckleberryP.png">
+                <img src="../../img/artist/HuckleberryP/profile.png">
             </div>
             <div class="content">
                 <div class="details">
@@ -37,14 +37,14 @@
                         <li><a href="" class="detailBtn"><ion-icon class="ion-icon" name="logo-facebook"></ion-icon></a></li>
                         <li><a href="" class="detailBtn"><ion-icon class="ion-icon" name="logo-instagram"></ion-icon></a></li>
                         <li><a href="" class="detailBtn"><ion-icon class="ion-icon" name="logo-youtube"></ion-icon></a></li>
-                        <li><div class="detailBtn musicBtn" id="musicBtn_2"><ion-icon class="ion-icon" name="musical-notes-outline"></ion-icon></div></li>
+                        <li><div class="detailBtn musicBtn"><ion-icon class="ion-icon" name="musical-notes-outline"></ion-icon></div></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" id="SupremeTeam">
             <div class="imgBox">
-                <img src="../../img/artist/SupremeTeam.png">
+                <img src="../../img/artist/SupremeTeam/profile.png">
             </div>
             <div class="content">
                 <div class="details">
@@ -53,16 +53,17 @@
                         <li><a href="" class="detailBtn"><ion-icon class="ion-icon" name="logo-facebook"></ion-icon></a></li>
                         <li><a href="" class="detailBtn"><ion-icon class="ion-icon" name="logo-instagram"></ion-icon></a></li>
                         <li><a href="" class="detailBtn"><ion-icon class="ion-icon" name="logo-youtube"></ion-icon></a></li>
-                        <li><div class="detailBtn musicBtn" id="musicBtn_3"><ion-icon class="ion-icon" name="musical-notes-outline"></ion-icon></div></li>
+                        <li><div class="detailBtn musicBtn"><ion-icon class="ion-icon" name="musical-notes-outline"></ion-icon></div></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div id="music"></div>
-        <div id="off">&lt;</div>
+        <div id="back">&lt;</div>
     </div>
     <script type="text/javascript" src="../../js/nav.js"></script>
-    <script type="text/javascript" src="../../js/artist/music.js"></script>
+    <script type="module" src="../../js/artist/card.js"></script>
+    <script type="module" src="../../js/artist/music.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
