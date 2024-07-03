@@ -1,66 +1,82 @@
 [
     {
         "albumNum": 4,
-        "title": "발레리노"
+        "title": "발레리노",
+        "live": "https://www.youtube.com/watch?v=VZZLb4l62sY"
     },
     {
         "albumNum": 3,
-        "title": "광대"
+        "title": "광대",
+        "live": "https://www.youtube.com/watch?v=ocSop2W88Aw"
     },
     {
         "albumNum": 7,
-        "title": "나란 놈은 답은 너다"
+        "title": "나란 놈은 답은 너다",
+        "live": "https://www.youtube.com/watch?v=AQcoY9g079I&list=PLDfb07A0ax3a5F9GTbLQoXoWhWBOzrCFC"
     },
     {
         "albumNum": 7,
-        "title": "회상"
+        "title": "회상",
+        "live": ""
     },
     {
         "albumNum": 3,
-        "title": "내가 웃는게 아니야"
+        "title": "내가 웃는게 아니야",
+        "live": ""
     },
     {
         "albumNum": 6,
-        "title": "우리 지금 만나"
+        "title": "우리 지금 만나",
+        "live": "https://www.youtube.com/watch?v=f3IedjfX0qc&list=PLDfb07A0ax3a5F9GTbLQoXoWhWBOzrCFC&index=3"
     },
     {
         "albumNum": 8,
-        "title": "행복을 찾아서"
+        "title": "행복을 찾아서",
+        "live": ""
     },
     {
         "albumNum": 2,
-        "title": "리쌍부르쓰"
+        "title": "리쌍부르쓰",
+        "live": ""
     },
     {
         "albumNum": 6,
-        "title": "일터"
+        "title": "일터",
+        "live": ""
     },
     {
         "albumNum": 7,
-        "title": "독기"
+        "title": "독기",
+        "live": ""
     },
     {
         "albumNum": 4,
-        "title": "누구를 위한 삶인가"
+        "title": "누구를 위한 삶인가",
+        "live": ""
     },
     {
         "albumNum": 7,
-        "title": "죽기전까지 날아야 하는 새"
+        "title": "죽기전까지 날아야 하는 새",
+        "live": ""
     },
     {
         "albumNum": 4,
-        "title": "영화처럼"
+        "title": "영화처럼",
+        "live": ""
     },
     {
         "albumNum": 6,
-        "title": "Carousel"
+        "title": "Carousel",
+        "live": ""
     },
     {
         "albumNum": 4,
-        "title": "Sunshine"
+        "title": "Sunshine",
+        "live": ""
     },
     {
         "albumNum": 6,
-        "title": "To. LeeSSang"
+        "title": "To. LeeSSang",
+        "live": ""
     }
 ]
