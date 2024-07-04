@@ -2,7 +2,7 @@ body{
     perspective: 1800px;
 }
 
-#cards{
+#list{
     display: inline-block;
     min-width: 1124px;
     background-color: #fff;
@@ -17,13 +17,13 @@ body{
     transform: rotateX(11deg) rotateY(16.5deg);
     margin: calc(50vh - 250px) calc(50vw - 562px - var(--body-padding-side));
 }
-#cards #subText{
+#list #subText{
     color: var(--color-sub);
     font-size: 16px;
     margin-bottom: 6px;
     transform: translateZ(25px);
 }
-#cards #mainText{
+#list #mainText{
     color: #3e3e42;
     font-size: 32px;
     font-weight: 800;
@@ -31,7 +31,7 @@ body{
     margin-bottom: 30px;
     transform: translateZ(35px);
 }
-#cards .card{
+#list .card{
     border-radius: 15px;
     box-shadow: 5px 5px 20px -5px  var(--color-shadow);
     display: inline-block;
@@ -46,25 +46,25 @@ body{
     text-align: center;
     cursor: pointer;
 }
-#cards .card:hover{
+#list .card:hover{
     transform: scale(125%);
 }
-#cards .card:not(:last-child){
+#list .card:not(:last-child){
     margin-right: 30px;
 }
-#cards .card .img{
+#list .card .img{
     position: relative;
     height: 100%;
     z-index: 2;
 }
-#cards .card .bg{
+#list .card .bg{
     position: absolute;
     inset: -50px;
     transform-origin: 50% 50%;
     transform: translateZ(-50px);
     z-index: 0;
 }
-#cards .card .bgFilter {
+#list .card .bgFilter {
     position: absolute;
     content:"";
     height:100%;
@@ -75,43 +75,43 @@ body{
     transition: transform 200ms ease-out;
     z-index: 1;
 }
-#cards .card:nth-child(3) .img{
+#list .card:nth-child(3) .img{
     top: -10px;
     left: -10px;
 }
-#cards .card:nth-child(3) .bg{
+#list .card:nth-child(3) .bg{
     background: url(https://wallpapercave.com/wp/wp10487933.jpg) center/cover no-repeat;
 }
-#cards .card:nth-child(4) .img{
+#list .card:nth-child(4) .img{
     left: -28px;
 }
-#cards .card:nth-child(4) .bg{
+#list .card:nth-child(4) .bg{
     background: url(https://i1.sndcdn.com/artworks-000212037884-oysu0t-t500x500.jpg) center/cover no-repeat;
 }
-#cards .card:nth-child(5) .img{
+#list .card:nth-child(5) .img{
     top: 0px;
     left: -14px;
     height: 90%;
 }
-#cards .card:nth-child(5) .bg{
+#list .card:nth-child(5) .bg{
     background: url(https://i.pinimg.com/736x/7e/c0/78/7ec0781ebd24a8b741a9babcfe120012.jpg) center/cover no-repeat;
 }
-#cards .card:nth-child(6) .img{
+#list .card:nth-child(6) .img{
     top: 20px;
     left: -130px;
     height: 80%;
 }
-#cards .card:nth-child(6) .bg{
+#list .card:nth-child(6) .bg{
     background: url(https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/166450909_803231010399618_5255669171835569694_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=KGWS3VzWnYcQ7kNvgFUqjSc&_nc_ht=scontent-ssn1-1.xx&oh=00_AYCPiMF0WuIuWERR_mOOLp4Url4W8zT5SdHMpEdrcGrxRg&oe=66A5D374) center/cover no-repeat;
 }
-#cards .card:nth-child(7) .img{
+#list .card:nth-child(7) .img{
     top: 0px;
     left: -100px;
 }
-#cards .card:nth-child(7) .bg{
+#list .card:nth-child(7) .bg{
     background: url(https://theriftcrown.com/wp-content/uploads/2022/06/zaun_1200x630.jpg) center/cover no-repeat;
 }
-#cards .card .text{
+#list .card .text{
     position: absolute;
     bottom: 0;
     z-index: 3;
@@ -123,7 +123,7 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-#cards .card .text .title{
+#list .card .text .title{
     color: #ffffff;
     font-size: 18px;
     font-weight: 700;

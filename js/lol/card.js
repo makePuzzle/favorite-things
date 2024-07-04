@@ -1,4 +1,4 @@
-const $cards = document.querySelector('#cards');
+const list = document.querySelector('#list');
 const cards = document.querySelectorAll('.card');
 const images = document.querySelectorAll('.img');
 const backgrounds = document.querySelectorAll('.bg');
@@ -13,7 +13,7 @@ const calcValue = (a, b) => {
 document.addEventListener("mousemove", e => {
     const X = calcValue(e.x, window.innerWidth);
     const Y = calcValue(e.y, window.innerHeight);
-    $cards.style.transform = `rotateX(${X * .2}deg) rotateY(${Y * .2}deg)`;
+    list.style.transform = `rotateX(${X * .2}deg) rotateY(${Y * .2}deg)`;
 
     images.forEach(img => {
         img.style.transform = `translateX(${-X * .5}px) translateY(${Y * .5}px)`

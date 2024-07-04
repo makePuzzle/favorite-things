@@ -31,9 +31,9 @@ const navHTML = `
     <li class="menu">
         <a href="">
             <span class="icon">
-                <ion-icon name="game-controller-outline"></ion-icon>
+                <ion-icon name="book-outline"></ion-icon>
             </span>
-            <span class="text">Photos</span>
+            <span class="text">Think</span>
         </a>
     </li>
     <li class="menu">
