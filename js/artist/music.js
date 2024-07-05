@@ -32,10 +32,14 @@ export async function innerMusicList(id) {
                 <div class="function">
                     <ul>
                         <li class="playBtn"><ion-icon class="ion-icon" name="play-outline"></ion-icon></li>
-                        <li><ion-icon class="ion-icon" name="pause-outline"></ion-icon></li>
+                        <li class="pauseBtn"><ion-icon class="ion-icon" name="pause-outline"></ion-icon></li>
                         <li><a href="${musicList[id][i].live}" target="_blank"><ion-icon class="ion-icon" name="headset-outline"></ion-icon></a></li>
                     </ul>
                 </div>
+                <audio controls class="player">
+                    <source src="../../mp3/artist/LeeSSang/발레리노.mp3" type="audio/mpeg"/>
+                </audio>
+                <input type="range" value="0" class="progress"/>
             </li>
         `;
     };
@@ -54,7 +58,41 @@ export async function innerMusicList(id) {
             });
             thisSong.classList.add('active');
             musicPlay(thisCanvas, canvases);
-            console.log(canvases)
-        })
-    })
+            const thisPlayer = thisSong.children[4];
+            const thisProgress = thisSong.children[5];
+            thisPlayer.play();
+        });
+    });
+
+    const pauseBtns = document.querySelectorAll(".pauseBtn");
+    pauseBtns.forEach(pauseBtn => {
+        pauseBtn.addEventListener("click", () => {
+            const thisSong = pauseBtn.parentElement.parentElement.parentElement;
+            const thisPlayer = thisSong.children[4];
+            thisPlayer.pause();
+        });
+    });
+
+    const progresses = document.querySelectorAll(".progress");
+    progresses.forEach(progress => {
+        const thisSong = progress.parentElement;
+        const thisPlayer = thisSong.children[4];
+        progress.onchange = () => {
+            console.log(progress.value)
+            console.log(thisPlayer.currentTime)
+            progress.max = thisPlayer.duration;
+            progress.value = thisPlayer.currentTime;
+        };
+
+        if(thisPlayer.play()){
+            setInterval(() => {
+                progress.value = thisPlayer.currentTime;
+            }, 500);
+        };
+    });
+
+    const players = document.querySelectorAll(".player");
+    players.forEach(player => {
+        player.volume = 0.01;
+    });
 };

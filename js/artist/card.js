@@ -2,7 +2,7 @@ import {
     innerMusicList
 } from "./music.js";
 const cards = document.querySelectorAll('.card');
-const music = document.getElementById('music');
+const musicBox = document.getElementById('music');
 const back = document.getElementById('back');
 const musicBtns = document.querySelectorAll('.musicBtn');
 
@@ -24,7 +24,7 @@ musicBtns.forEach(musicBtn => {
         });
         thisCard.classList.remove("none");
         thisCard.classList.add("fix");
-        music.classList.add("fix");
+        musicBox.classList.add("fix");
         back.classList.add("fix");
     });
 })
@@ -33,7 +33,8 @@ back.addEventListener("click",()=>{
     cards.forEach(card => {
         card.classList.remove("none");
         card.classList.remove("fix");
-        music.classList.remove("fix");
-        back.classList.remove("fix");
     });
+    musicBox.innerHTML = `<ul></ul>`;
+    musicBox.classList.remove("fix");
+    back.classList.remove("fix");
 });
