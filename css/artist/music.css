@@ -51,6 +51,10 @@
 #music ul li.song canvas{
     display: none;
 }
+#music ul li.song.active{
+    height: 66px;
+    border-bottom: 2px solid #828286;
+}
 #music ul li.song.active canvas{
     display: block;
     width: 100%;
