@@ -8,11 +8,11 @@ export function musicPlay(thisCanvas, canvases){
         ctx.fillRect(x, y, 1, 1);
     };
 
-    const R = (x, y, t) => Math.floor(64 + 64 * Math.cos((x * x - y * y) / 300 + t));
+    const R = (x, y, t) => Math.floor(200 + 64 * Math.cos((x * x - y * y) / 300 + t));
 
-    const G = (x, y, t) => Math.floor(64 + 64 * Math.sin((x * x * Math.cos(t / 4) + y * y * Math.sin(t / 3)) / 300));
+    const G = (x, y, t) => Math.floor(200 + 64 * Math.sin((x * x * Math.cos(t / 4) + y * y * Math.sin(t / 3)) / 300));
 
-    const B = (x, y, t) => Math.floor(64 + 64 * Math.sin(5 * Math.cos(t / 9) + ((x - 100) * (x - 100) + (y - 100) * (y - 100)) / 1100));
+    const B = (x, y, t) => Math.floor(200 + 64 * Math.sin(5 * Math.cos(t / 9) + ((x - 100) * (x - 100) + (y - 100) * (y - 100)) / 1100));
 
     let t = 0;
 

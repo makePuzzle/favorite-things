@@ -37,9 +37,9 @@ export async function innerMusicList(id) {
                     </ul>
                 </div>
                 <audio controls class="player">
-                    <source src="../../mp3/artist/LeeSSang/발레리노.mp3" type="audio/mpeg"/>
+                    <source src="../../mp3/artist/${id}/${musicList[id][i].title}.mp3" type="audio/mpeg"/>
                 </audio>
-                <input type="range" value="0" class="progress"/>
+                <input type="range" value="0" min="0" class="progress"/>
             </li>
         `;
     };
@@ -53,14 +53,14 @@ export async function innerMusicList(id) {
             const canvases = document.querySelectorAll('canvas');
             const thisSong = playBtn.parentElement.parentElement.parentElement;
             const thisCanvas = thisSong.children[0];
+            const thisPlayer = thisSong.children[4];
             songs.forEach(song => {
                 song.classList.remove('active')
+                song.children[4].pause()
             });
+            thisPlayer.play();
             thisSong.classList.add('active');
             musicPlay(thisCanvas, canvases);
-            const thisPlayer = thisSong.children[4];
-            const thisProgress = thisSong.children[5];
-            thisPlayer.play();
         });
     });
 
@@ -80,11 +80,11 @@ export async function innerMusicList(id) {
         progress.onchange = () => {
             console.log(progress.value)
             console.log(thisPlayer.currentTime)
-            progress.max = thisPlayer.duration;
-            progress.value = thisPlayer.currentTime;
+            // progress.max = thisPlayer.duration;
+            thisPlayer.currentTime = progress.value;
         };
 
-        if(thisPlayer.play()){
+        if(thisPlayer.play){
             setInterval(() => {
                 progress.value = thisPlayer.currentTime;
             }, 500);
@@ -93,6 +93,6 @@ export async function innerMusicList(id) {
 
     const players = document.querySelectorAll(".player");
     players.forEach(player => {
-        player.volume = 0.01;
+        player.volume = 0.1;
     });
 };

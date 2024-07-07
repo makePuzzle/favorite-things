@@ -51,11 +51,16 @@
 #music ul li.song canvas{
     display: none;
 }
+#music ul li.song .player,
+#music ul li.song .progress{
+    display: none;
+}
 #music ul li.song.active{
     height: 66px;
 }
 #music ul li.song.active .progress{
     -webkit-appearance: none;
+    display: block;
     width: 100%;
     height: 2px;
     background-color: #828286;
