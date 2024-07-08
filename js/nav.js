@@ -29,7 +29,7 @@ const navHTML = `
         </a>
     </li>
     <li class="menu">
-        <a href="">
+        <a href="/html/think/wave/app.html">
             <span class="icon">
                 <ion-icon name="book-outline"></ion-icon>
             </span>

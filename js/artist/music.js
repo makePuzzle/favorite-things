@@ -3,7 +3,7 @@ import {
 } from "../../js/util.js";
 import {
     musicPlay
-} from "../../js/artist/wave.js";
+} from "../../js/artist/wave0.js";
 
 const musicBox = document.getElementById("music");
 

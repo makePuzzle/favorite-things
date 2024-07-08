@@ -15,6 +15,7 @@ body{
     max-width: 1920px;
     background-color: var(--color-background);
     padding: 0 var(--body-padding-side);
+    position: relative;
 }
 img {
     -webkit-user-select: none;
