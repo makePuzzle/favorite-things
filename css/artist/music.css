@@ -96,10 +96,30 @@
     filter: grayscale(.6) brightness(.6);
     margin-right: 12px;
     z-index: 1;
+    cursor: pointer;
 }
 #music ul li.song.active .cover,
 #music ul li.song:hover .cover{
     filter: grayscale(0) brightness(1);
+}
+#music ul li.song .cover .playBtn,
+#music ul li.song .cover .pauseBtn{
+    display: none;
+}
+#music ul li.song .cover .playBtn.mouseover,
+#music ul li.song .cover .pauseBtn.mouseover{
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 48px;
+    font-size: 28px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-top: 9px;
+    z-index: 2;
+    color: #e2dfefd4;
 }
 #music ul li.song .cover img{
     width: 102%;
