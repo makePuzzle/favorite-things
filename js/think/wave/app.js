@@ -34,8 +34,8 @@ class App {
 
         requestAnimationFrame(this.animate.bind(this));
     }
-}
+};
 
 window.onload = () => {
     new App();
-}
+};
